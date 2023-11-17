@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit the Students Data</title>
+</head>
+<body>
+    Edit the data
+    <p>student id : <%= student.id %></p>
+    <p>student Name : <%= student.name %></p>
+    <form method="post" action="/resource?_method=PATCH">
+        <textarea name="roll" id="" cols="10" rows="1"><%=student.roll %></textarea>
+        <button>submit</button>
+    </form>
+</body>
+</html>

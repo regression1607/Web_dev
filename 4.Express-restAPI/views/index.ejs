@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Students Data</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Students Data</h1>
+    <% for(student of students) { %>
+        <div class="card">
+            <h3> Name :<%= student.name %></h3>
+            <h4> College :<%= student.college %></h4>
+            <h4> Roll_no :<%= student.roll %></h4><br>
+            <a href="http://localhost:8080/students/<%=student.id%>">see in Detail</a>
+            <a href="http://localhost:8080/students/<%=student.id%>/edit">Edit</a>
+         <form method="post" action="/students/<%=student.id%>?_method=DELETE">
+         <button>Delete</button>    
+        </form>
+        </div>
+        <%}%>
+        <a href="http://localhost:8080/students/new">Add new students </a>
+</body>
+</html>
